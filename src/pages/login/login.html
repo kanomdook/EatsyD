@@ -20,16 +20,16 @@
     <ion-input type="password"></ion-input>
   </ion-item>
   <ion-row class="margintop">
-    <button ion-button color="secondary" round full>
+    <button ion-button color="secondary" round full (click)="gotoTabs()">
       <ion-icon name="md-key" class="paddingrht"></ion-icon>Login</button>
   </ion-row>
   <ion-row>
-    <button ion-button round full>
+    <button ion-button round full (click)="gotoTabs()">
       <ion-icon name="logo-facebook" class="paddingrht"></ion-icon>Facebook Login</button>
   </ion-row>
-  <button ion-button color="secondary" round clear>Forgot Password</button>
+  <button ion-button color="secondary" round clear (click)="gotoForgotPassword()">Forgot Password</button>
 </ion-content>
 <ion-footer>
-  <button ion-button color="danger" full>
+  <button ion-button color="danger" full (click)="gotoRegister()">
     <ion-icon name="md-contact" class="paddingrht"></ion-icon>Register</button>
 </ion-footer>

@@ -23,7 +23,9 @@ import { MyProfilePage } from '../pages/my-profile/my-profile';
     TabsPage,
     LoginPage,
     RegisterPage,
-    ForgotpasswordPage
+    ForgotpasswordPage,
+    GreetingPage,
+    MyProfilePage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,9 @@ import { MyProfilePage } from '../pages/my-profile/my-profile';
     TabsPage,
     LoginPage,
     RegisterPage,
-    ForgotpasswordPage
+    ForgotpasswordPage,
+    GreetingPage,
+    MyProfilePage
   ],
   providers: [
     StatusBar,

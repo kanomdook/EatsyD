@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons start>
-      <button ion-button icon-only>
+      <button ion-button icon-only (click)="gotoProfilePage()">
         <ion-icon name="person"></ion-icon>
       </button>
     </ion-buttons>
@@ -17,7 +17,7 @@
 <ion-content>
   <ion-searchbar placeholder="search" [(ngModel)]="search"></ion-searchbar>
 
-  <div>
+  <div *ngIf="bannerList.length > 0">
     <ion-slides pager autoplay="3000" loop="true">
       <ion-slide *ngFor="let item of bannerList">
         <img src="{{item}}" alt="image">
@@ -48,7 +48,7 @@
 
   <div [ngSwitch]="segmentData">
     <ion-list *ngSwitchCase="'nearby'">
-      <div>
+      <div *ngIf="shopList.length > 0">
         <ion-scroll scrollX="true" class="slide-x">
           <ion-row no-padding class="row-custom">
             <ion-col col-4 *ngFor="let item of shopList">
@@ -68,7 +68,7 @@
         </ion-scroll>
       </div>
 
-      <div>
+      <div *ngIf="promotionList.length > 0">
           <ion-scroll scrollX="true" class="slide-x">
             <ion-row no-padding class="row-custom mgtd-10">
               <ion-col col-4 *ngFor="let item of promotionList">

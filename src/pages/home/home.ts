@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { MyProfilePage } from '../my-profile/my-profile';
 
 @Component({
   selector: 'page-home',
@@ -61,6 +62,10 @@ export class HomePage {
       image: 'https://static.eatigo.com/eatigo_1e4423fbab0cd3b5c873857fb4b3db55_20170831160249_1990.jpg'
     }]
 
+  }
+
+  gotoProfilePage(){
+    this.navCtrl.push(MyProfilePage);
   }
 
 }

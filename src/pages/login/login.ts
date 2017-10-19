@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
+import { RegisterPage } from '../register/register';
+import { ForgotpasswordPage } from '../forgotpassword/forgotpassword';
 
 /**
  * Generated class for the LoginPage page.
@@ -19,7 +22,19 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    
+  }
+
+  gotoTabs(){
+    this.navCtrl.setRoot(TabsPage);
+  }
+
+  gotoRegister(){
+    this.navCtrl.push(RegisterPage);
+  }
+
+  gotoForgotPassword(){
+    this.navCtrl.push(ForgotpasswordPage);
   }
 
 }
