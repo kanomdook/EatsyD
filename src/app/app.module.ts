@@ -21,14 +21,9 @@ import { MyProfilePage } from '../pages/my-profile/my-profile';
     ContactPage,
     HomePage,
     TabsPage,
-<<<<<<< HEAD
-    GreetingPage,
-    MyProfilePage
-=======
     LoginPage,
     RegisterPage,
     ForgotpasswordPage
->>>>>>> 02526abf0e3e05e38155f44d6f06d03956bf3d99
   ],
   imports: [
     BrowserModule,
@@ -41,14 +36,9 @@ import { MyProfilePage } from '../pages/my-profile/my-profile';
     ContactPage,
     HomePage,
     TabsPage,
-<<<<<<< HEAD
-    GreetingPage,
-    MyProfilePage
-=======
     LoginPage,
     RegisterPage,
     ForgotpasswordPage
->>>>>>> 02526abf0e3e05e38155f44d6f06d03956bf3d99
   ],
   providers: [
     StatusBar,
