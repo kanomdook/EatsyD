@@ -11,6 +11,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+  <img src="https://www.shareicon.net/download/2016/09/02/824429_fork_512x512.png" class="center">
   <ion-item>
     <ion-label floating>Username</ion-label>
     <ion-input type="text"></ion-input>
@@ -20,18 +21,28 @@
     <ion-input type="password"></ion-input>
   </ion-item>
   <ion-row class="margintop">
+    <ion-col>
     <button ion-button color="secondary" round full (click)="gotoTabs()">
       <ion-icon name="md-key" class="paddingrht"></ion-icon>Login</button>
+    </ion-col>
+    <ion-col>
+        <button ion-button round full (click)="gotoTabs()">
+          <ion-icon name="logo-facebook" class="paddingrht"></ion-icon>Facebook</button>
+      </ion-col>
   </ion-row>
   <ion-row>
-    <button ion-button round full (click)="gotoTabs()">
-      <ion-icon name="logo-facebook" class="paddingrht"></ion-icon>Facebook Login</button>
-  </ion-row>
+    <ion-col>
   <button ion-button color="secondary" round clear (click)="gotoForgotPassword()">Forgot Password</button>
+</ion-col>
+<ion-col>
+    <button ion-button color="secondary" round clear (click)="gotoForgotPassword()">Register</button>
+  </ion-col>
+</ion-row>
 </ion-content>
+
 <ion-footer>
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <button ion-button color="yello" full (click)="gotoRegister()">
       <ion-icon name="md-contact" class="paddingrht"></ion-icon>Register</button>
-  </ion-toolbar>
+  </ion-toolbar> -->
 </ion-footer>
