@@ -39,7 +39,8 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  star: #f2d43a
+  star: #f2d43a,
+  yello: #f2d43a
 );
 
 
@@ -83,6 +84,11 @@ $colors: (
   color: #000000;
   font-weight: bold;
   border-bottom: 4px solid #f2d43a !important;
+}
+
+.button-ios-yello {
+  color: #ffffff !important;
+  font-weight: bold !important;
 }
 
 
