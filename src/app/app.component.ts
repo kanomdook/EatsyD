@@ -1,8 +1,12 @@
+import { HomePage } from '../pages/home/home';
+import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
+import { RegisterPage } from '../pages/register/register';
+
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
