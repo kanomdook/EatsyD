@@ -1,17 +1,91 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>EatsyD</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-searchbar placeholder="search" [(ngModel)]="search"></ion-searchbar>
+
+  <div>
+    <ion-slides pager autoplay="3000" loop="true">
+      <ion-slide *ngFor="let item of bannerList">
+        <img src="{{item}}" alt="image">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-row class="mgtd-10">
+    <ion-col col-9>
+      <img class="mgt-10" src="https://image.flaticon.com/icons/svg/188/188559.svg" width="36" height="36">
+    </ion-col>
+    <ion-col col-3>
+      <h6>See all>></h6>
+    </ion-col>
+  </ion-row>
+
+  <ion-segment [(ngModel)]="segmentData">
+    <ion-segment-button value="nearby">
+      Nearby <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="popular">
+      Popular <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="favolite">
+      Favolite <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentData">
+    <ion-list *ngSwitchCase="'nearby'">
+      <div>
+        <ion-scroll scrollX="true" class="slide-x">
+          <ion-row no-padding class="row-custom">
+            <ion-col col-4 *ngFor="let item of shopList">
+              <img [src]="item.image" width="124px" height="84px">
+              <p>
+                <ion-icon name="star" color="star"></ion-icon>
+                <ion-icon name="star" color="star"></ion-icon>
+                <ion-icon name="star" color="star"></ion-icon>
+                <ion-icon name="star" color="star"></ion-icon>
+                <ion-icon name="star" color="star"></ion-icon>
+              </p>
+              <h5 class="mgtd-10">{{item.name}}</h5>
+              <p class="mgtd-10 c-font">{{'Coffee/Break'}}</p>
+              <p class="mgtd-10 c-font">{{'Lumlooka'}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-scroll>
+      </div>
+
+      <div>
+          <ion-scroll scrollX="true" class="slide-x">
+            <ion-row no-padding class="row-custom mgtd-10">
+              <ion-col col-4 *ngFor="let item of promotionList">
+                  <h6 class="center">{{item.name}}</h6>                  
+                <img [src]="item.image">
+              </ion-col>
+            </ion-row>
+          </ion-scroll>
+        </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'popular'">
+      popular
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'favolite'">
+      favolite
+    </ion-list>
+  </div>
 </ion-content>

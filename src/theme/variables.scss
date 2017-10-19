@@ -38,14 +38,52 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  star: #f2d43a
 );
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+.toolbar-background-ios {
+  background: #f2d43a !important;
+}
+.tabs-ios .tabbar {
+  background: #f2d43a !important;
+}
 
+.tabs-ios .tab-button-icon {
+  color: #ffffff !important;
+}
+
+.toolbar-title-ios {
+  color: #ffffff !important;
+}
+
+.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .tab-button[aria-selected=true] {
+  color: #ffffff !important;
+}
+
+.scroll-content {
+  background-color: #f2f2f2 !important;
+}
+
+.bar-button-default-ios {
+  color: #ffffff !important;
+}
+
+.segment-ios .segment-button {
+  border-color: #f2f2f2 !important;
+  color: #1f1e1e !important;
+}
+
+.segment-ios .segment-button.segment-activated {
+  background-color: #f2f2f2 !important;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 4px solid #f2d43a !important;
+}
 
 
 

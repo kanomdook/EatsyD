@@ -1,3 +1,30 @@
 page-home {
-
+    .swiper-slide img {
+        height: 100px;
+    }
+    .swiper-pagination-bullet-active {
+        background: #ffffff;
+    }
+    .mgt-10 {
+        margin-top: 10px;
+    }
+    .slide-x {
+        height: 200px;
+    }
+    .row-custom {
+        flex-wrap: inherit !important;
+    }
+    [col-6] {
+        margin-top: 6px;
+    }
+    .mgtd-10 {
+        margin-top: -10px;
+    }
+    .center {
+        text-align: center;
+    }
+    .c-font {
+        color: #c2c2c2;
+        font-size: 0.9em;
+    }
 }
