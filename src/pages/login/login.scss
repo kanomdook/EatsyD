@@ -1,30 +1,29 @@
-.paddingrht{
-    padding-right: 10px;
-}
-.margintop{
-    margin-top: 30px;
-}
-.margintoplogo{
-    margin-top: 40px;
-}
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    width: 250px;
-    height: 250px;
-}
-.butttoncolor{
-    color: black !important;
-    font-weight: bold;
-}
-
-    
-
-.scroll-content {
-    background-color: #FEE959 !important;
-}
-.opacity{
-    background:transparent;
+page-login {
+    .paddingrht {
+        padding-right: 10px;
+    }
+    .margintop {
+        margin-top: 30px;
+    }
+    .margintoplogo {
+        margin-top: 40px;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        width: 250px;
+        height: 250px;
+    }
+    .butttoncolor {
+        color: black !important;
+        font-weight: bold;
+    }
+    .scroll-content {
+        background-color: #FEE959 !important;
+    }
+    .opacity {
+        background: transparent;
+    }
 }
