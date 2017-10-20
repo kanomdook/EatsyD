@@ -15,8 +15,8 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     this.bannerList = [
       './assets/image/banner1.png',
-      './../assets/image/banner2.jpg',
-      './../assets/image/banner3.png'
+      './assets/image/banner2.jpg',
+      './assets/image/banner3.png'
     ];
 
     this.shopList = [{
