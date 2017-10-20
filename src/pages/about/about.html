@@ -1,11 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Promotion
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+    <ion-card *ngFor="let item of [1,2,3,4]">
+        <img src="./assets/image/promotion_essy.jpg" />
+
+    </ion-card>
 
 </ion-content>
