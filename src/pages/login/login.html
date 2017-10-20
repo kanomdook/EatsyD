@@ -10,14 +10,14 @@
     <ion-title>Login</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-  <img src="https://www.shareicon.net/download/2016/09/02/824429_fork_512x512.png" class="center">
-  <ion-item>
-    <ion-label floating>Username</ion-label>
+<ion-content padding class="scroll-content">
+  <img src="../../assets/image/logoeatsyd.png" class="center margintoplogo">
+  <ion-item class="opacity">
+    <ion-label placeholder >Username</ion-label>
     <ion-input type="text"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label floating>Password</ion-label>
+  <ion-item class="opacity">
+    <ion-label placeholder>Password</ion-label>
     <ion-input type="password"></ion-input>
   </ion-item>
   <ion-row class="margintop">
@@ -35,7 +35,7 @@
   <button ion-button color="secondary" round clear (click)="gotoForgotPassword()">Forgot Password</button>
 </ion-col>
 <ion-col>
-    <button ion-button color="secondary" round clear (click)="gotoForgotPassword()">Register</button>
+    <button ion-button round clear (click)="gotoRegister()" class="butttoncolor">Register</button>
   </ion-col>
 </ion-row>
 </ion-content>
