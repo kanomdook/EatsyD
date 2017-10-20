@@ -14,20 +14,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content no-bounce>
   <ion-searchbar placeholder="search" [(ngModel)]="search"></ion-searchbar>
-
-  <div *ngIf="bannerList.length > 0">
-    <ion-slides pager autoplay="3000" loop="true">
-      <ion-slide *ngFor="let item of bannerList">
-        <img src="{{item}}" alt="image">
-      </ion-slide>
-    </ion-slides>
-  </div>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      <div *ngIf="bannerList.length > 0">
+        <ion-slides pager autoplay="3000" loop="true">
+          <ion-slide *ngFor="let item of bannerList">
+            <img src="{{item}}" alt="image">
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-row class="mgtd-10">
     <ion-col col-9>
-      <img class="mgt-10" src="https://image.flaticon.com/icons/svg/188/188559.svg" width="36" height="36">
+      <img class="mgt-10" src="../../assets/image/logoeatsyd.png" width="36" height="36">
     </ion-col>
     <ion-col col-3>
       <h6>See all>></h6>
@@ -36,13 +40,16 @@
 
   <ion-segment [(ngModel)]="segmentData">
     <ion-segment-button value="nearby">
-      Nearby <ion-icon name="pin"></ion-icon>
+      Nearby
+      <ion-icon name="pin"></ion-icon>
     </ion-segment-button>
     <ion-segment-button value="popular">
-      Popular <ion-icon name="star"></ion-icon>
+      Popular
+      <ion-icon name="star"></ion-icon>
     </ion-segment-button>
     <ion-segment-button value="favolite">
-      Favolite <ion-icon name="heart"></ion-icon>
+      Favolite
+      <ion-icon name="heart"></ion-icon>
     </ion-segment-button>
   </ion-segment>
 
@@ -69,15 +76,15 @@
       </div>
 
       <div *ngIf="promotionList.length > 0">
-          <ion-scroll scrollX="true" class="slide-x">
-            <ion-row no-padding class="row-custom mgtd-10">
-              <ion-col col-4 *ngFor="let item of promotionList">
-                  <h6 class="center">{{item.name}}</h6>                  
-                <img [src]="item.image">
-              </ion-col>
-            </ion-row>
-          </ion-scroll>
-        </div>
+        <ion-scroll scrollX="true" class="slide-x">
+          <ion-row no-padding class="row-custom mgtd-10">
+            <ion-col col-4 *ngFor="let item of promotionList">
+              <h6 class="center">{{item.name}}</h6>
+              <img [src]="item.image">
+            </ion-col>
+          </ion-row>
+        </ion-scroll>
+      </div>
     </ion-list>
 
     <ion-list *ngSwitchCase="'popular'">

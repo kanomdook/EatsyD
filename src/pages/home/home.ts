@@ -14,9 +14,9 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
     this.bannerList = [
-      'https://s3-ap-southeast-1.amazonaws.com/static.wongnai.com/ads/2017/KBank_Everyday_Dining2017_640x160px.jpg',
-      'https://s3-ap-southeast-1.amazonaws.com/static.wongnai.com/ads/2017/Banner-Wongnai-App-Ais-640x160pix.jpg',
-      'https://s3-ap-southeast-1.amazonaws.com/static.wongnai.com/ads/2017/scb-640x160.jpg'
+      './assets/image/banner1.png',
+      './../assets/image/banner2.jpg',
+      './../assets/image/banner3.png'
     ];
 
     this.shopList = [{
