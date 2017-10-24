@@ -7,9 +7,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let item of [1,2,3,4]">
-        <img src="./assets/image/promotion_essy.jpg" />
-
+    <ion-card *ngFor="let item of promotionList">
+        <img [src]="item" />
     </ion-card>
-
 </ion-content>
