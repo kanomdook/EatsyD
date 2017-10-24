@@ -1,4 +1,4 @@
-<ion-tabs>
+<ion-tabs #myTabs>
     <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
     <ion-tab [root]="tab2Root" tabTitle="Promotion" tabIcon="megaphone"></ion-tab>
     <ion-tab [root]="tab3Root" tabTitle="F Plus" tabIcon="contacts"></ion-tab>
@@ -8,5 +8,5 @@
 
 <ion-fab bottom center style="bottom:-0.3%;">
     <!-- <button ion-fab><img src="./assets/icon/eatsyicon.png" width="61" height="64" alt=""></button> -->
-    <button ion-fab no-padding no-margin style="width:68px; height:68px; background-color:#f2d43a;"><img no-padding src="./assets/icon/eatsyicon.png" width="65" height="65" alt=""></button>
+    <button ion-fab no-padding no-margin style="width:68px; height:68px; background-color:#f2d43a;" (click)="centerTab()"><img no-padding src="./assets/icon/eatsyicon.png" width="65" height="65" alt=""></button>
 </ion-fab>

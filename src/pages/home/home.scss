@@ -10,7 +10,10 @@ page-home {
         margin-top: 10px;
     }
     .slide-x {
-        height: 200px;
+        height: 196px;
+    }
+    .slide-x2 {
+        height: 64px;
     }
     .row-custom {
         flex-wrap: inherit !important;
@@ -27,5 +30,38 @@ page-home {
     .c-font {
         color: #c2c2c2;
         font-size: 0.9em;
+    }
+    ion-card {
+        position: relative;
+        text-align: center;
+    }
+    .card-title {
+        position: absolute;
+        top: 68%;
+        font-size: 1.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+    }
+    .grid {
+        padding: 0px;
+    }
+    .mgtop-20 {
+        margin-top: -20px;
+    }
+    .mgtop-20 {
+        margin-top: -14px;
     }
 }

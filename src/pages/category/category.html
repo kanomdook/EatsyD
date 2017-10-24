@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>EATSYD</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar placeholder="search restaurants" [(ngModel)]="search"></ion-searchbar>
+
+  <div *ngIf="categoryList.length > 0">
+    <ion-scroll scrollX="true" class="slide-x2">
+      <ion-row no-padding class="row-custom">
+        <ion-col col-4 class="center" *ngFor="let item of categoryList">
+          <img [src]="item.image" width="44px" height="44px">
+          <h6 class="mgt-6">{{item.title}}</h6>
+        </ion-col>
+      </ion-row>
+    </ion-scroll>
+  </div>
+
+  <ion-segment [(ngModel)]="segmentData">
+    <ion-segment-button value="nearby">
+      Nearby
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="popular">
+      Popular
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="favolite">
+      Favorite
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentData">
+    <ion-list *ngSwitchCase="'nearby'">
+      <ion-item *ngFor="let item of shopList">
+        <ion-thumbnail item-start>
+          <img [src]="item.image">
+        </ion-thumbnail>
+        <h2>{{item.name}}</h2>
+        <p>{{item.type}}</p>
+        <p class="bg">Promotion</p>
+        <p>
+          <ion-icon name="heart" color="danger"></ion-icon>
+          <ion-icon name="heart" color="danger"></ion-icon>
+          <ion-icon name="heart" color="danger"></ion-icon>
+          <ion-icon name="heart" color="danger"></ion-icon>
+          <ion-icon name="heart" color="danger"></ion-icon>
+        </p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'popular'">
+      popular
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'favolite'">
+      favolite
+    </ion-list>
+  </div>
+</ion-content>

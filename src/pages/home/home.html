@@ -29,16 +29,16 @@
     </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-row class="mgtd-10">
+  <!-- <ion-row class="mgtd-10">
     <ion-col col-9>
       <img class="mgt-10" src="./assets/image/logoeatsyd.png" width="36" height="36">
     </ion-col>
     <ion-col col-3>
       <h6>See all>></h6>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
-  <ion-segment [(ngModel)]="segmentData">
+  <ion-segment [(ngModel)]="segmentData" class="mgtop-14">
     <ion-segment-button value="nearby">
       Nearby
       <ion-icon name="pin"></ion-icon>
@@ -76,11 +76,15 @@
       </div>
 
       <div *ngIf="promotionList.length > 0">
-        <ion-scroll scrollX="true" class="slide-x">
-          <ion-row no-padding class="row-custom mgtd-10">
+        <ion-scroll scrollX="true" class="slide-x2">
+          <ion-row no-padding class="row-custom mgtd-10 mgtop-20">
             <ion-col col-4 *ngFor="let item of promotionList">
-              <h6 class="center">{{item.name}}</h6>
-              <img [src]="item.image">
+              <!-- <h6 class="center">{{item.name}}</h6>
+              <img [src]="item.image"> -->
+              <ion-card>
+                <img [src]="item.image" />
+                <div class="card-title">{{item.name}}</div>
+              </ion-card>
             </ion-col>
           </ion-row>
         </ion-scroll>
@@ -92,7 +96,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'favolite'">
-      favolite
+      favorite
     </ion-list>
   </div>
 </ion-content>

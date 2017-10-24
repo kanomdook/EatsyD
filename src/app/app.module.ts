@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GreetingPage } from '../pages/greeting/greeting';
 import { MyProfilePage } from '../pages/my-profile/my-profile';
+import { CategoryPage } from '../pages/category/category';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MyProfilePage } from '../pages/my-profile/my-profile';
     RegisterPage,
     ForgotpasswordPage,
     GreetingPage,
-    MyProfilePage
+    MyProfilePage,
+    CategoryPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { MyProfilePage } from '../pages/my-profile/my-profile';
     RegisterPage,
     ForgotpasswordPage,
     GreetingPage,
-    MyProfilePage
+    MyProfilePage,
+    CategoryPage
   ],
   providers: [
     StatusBar,
